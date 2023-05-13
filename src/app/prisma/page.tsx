@@ -2,7 +2,7 @@ import "~/styles/globals.css";
 
 import { type NextPage } from "next";
 import Head from "next/head";
-import { prisma } from "~/server/db";
+import { prisma } from "~/prisma/db";
 
 const Prisma: NextPage = async () => {
   const data = await prisma.example.findMany();

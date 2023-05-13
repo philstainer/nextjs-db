@@ -1,10 +1,9 @@
 import "~/styles/globals.css";
 
-import { type NextPage } from "next";
 import Head from "next/head";
 import { prisma } from "~/prisma/db";
 
-const Prisma: NextPage = async () => {
+const Prisma = async () => {
   const data = await prisma.example.findMany();
 
   if (!data.length) await prisma.example.create({ data: {} });

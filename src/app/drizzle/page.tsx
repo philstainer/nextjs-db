@@ -1,11 +1,10 @@
 import "~/styles/globals.css";
 
-import { type NextPage } from "next";
 import Head from "next/head";
 import { db } from "~/drizzle/db";
 import { example } from "~/drizzle/schema";
 
-const Prisma: NextPage = async () => {
+const Prisma = async () => {
   const data = await db.select().from(example);
 
   // if (!data.length) await prisma.example.create({ data: {} });
